@@ -1,0 +1,593 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  background-color: #f7f7f7;
+}
+.input-wrapper {
+  position: relative;
+}
+input {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 4.8rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #e0e0e0;
+  padding: 2.5rem 0.9rem 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+input:focus {
+  outline: none;
+}
+input.error {
+  border-color: #d90000;
+}
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder,
+input::-moz-placeholder,
+input:-moz-placeholder {
+  color: #999;
+}
+input[type="text"] ~ span.active,
+input[type="password"] ~ span.active,
+input[type="email"] ~ span.active {
+  font-size: 1.1rem;
+  top: 0.5rem;
+}
+input[type="text"] ~ span,
+input[type="password"] ~ span,
+input[type="email"] ~ span {
+  position: absolute;
+  left: 1rem;
+  top: 1.1em;
+  font-size: 1.4rem;
+  color: #999;
+  font-weight: 400;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+input[type="submit"] {
+  -webkit-box-shadow: 0 1.2rem 1.6rem rgba(30,20,108,0.1);
+  box-shadow: 0 1.2rem 1.6rem rgba(30,20,108,0.1);
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #6455d6;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+input[type="submit"]:hover {
+  background-color: #897ee0;
+}
+form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 1.5rem rgba(0,0,0,0.02);
+  box-shadow: 0 0 1.5rem rgba(0,0,0,0.02);
+  background-color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+label.error {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 999;
+  text-align: left;
+  padding: 0.2rem;
+  line-height: 1.2rem;
+  color: #d90000;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+.login-form {
+  max-width: 450px;
+  padding: 5.5rem 8.9rem;
+}
+.login-form .email-input,
+.login-form .password-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.login-form .password-input {
+  margin-bottom: 3.8rem;
+}
+.login-form .row:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.login-form .checkbox-wrapper {
+  display: inline-block;
+  line-height: 3.7rem;
+}
+.login-form .checkbox-wrapper label {
+  display: inline-block;
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.login-form .checkbox-wrapper label:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 0.1rem solid #6455d6;
+  border-radius: 0.2rem;
+  margin-right: 0.4rem;
+  margin-top: -0.05rem;
+}
+.login-form .checkbox-wrapper label:hover {
+  cursor: pointer;
+}
+.login-form .checkbox {
+  display: none;
+}
+.login-form .checkbox:checked + label:before {
+  background-image: url("../img/checkbox.svg");
+  background-position: center;
+  background-size: 1.1rem;
+  background-repeat: no-repeat;
+}
+.login-form .submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3.6rem;
+  padding: 1rem 3rem;
+  float: right;
+}
+.login-form .footer {
+  clear: both;
+  margin-top: 5.9rem;
+  text-align: center;
+}
+.login-form .footer span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #999;
+}
+.login-form .register,
+.login-form .forgot-password {
+  font-size: 1.3rem;
+  font-weight: 400;
+  display: block;
+  color: #4b3eaf;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+.login-form .register:hover,
+.login-form .forgot-password:hover {
+  color: #897ee0;
+}
+.login-form .forgot-password {
+  margin-top: 2.2rem;
+}
+.register-form {
+  max-width: 605px;
+  padding: 5.8rem 6rem;
+}
+.register-form h2 {
+  color: #a9a7b5;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.register-form .input-container {
+  margin-bottom: 4.1rem;
+}
+.register-form .name-input-wrapper,
+.register-form .email-input-wrapper {
+  display: inline-block;
+  width: 22.4rem;
+}
+.register-form .name-input-wrapper {
+  margin-right: 3.3rem;
+}
+.register-form .accout-wrapper {
+  position: relative;
+  margin-bottom: 5.5rem;
+}
+.register-form .accout-wrapper input[type="radio"] {
+  display: none;
+}
+.register-form .accout-wrapper input[type="radio"]:checked + .radio-custom::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.4rem;
+  background: #000;
+  border-radius: 50%;
+}
+.register-form .accout-wrapper .radio-custom {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 0.1rem solid #6455d6;
+  border-radius: 50%;
+  margin-top: -0.2rem;
+  margin-right: 0.9rem;
+}
+.register-form .accout-wrapper .option-name {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #272727;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.register-form .accout-wrapper .description {
+  margin-left: 2.85rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #999;
+}
+.register-form .accout-wrapper .description.first {
+  width: 18.6rem;
+}
+.register-form .accout-wrapper .description.second {
+  width: 20.6rem;
+}
+.register-form .submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4.2rem;
+  display: block;
+  padding: 1.3rem 3rem;
+  margin-left: auto;
+}
+.email-confirmation-form {
+  max-width: 810px;
+  padding: 109px 134px;
+  text-align: center;
+}
+.email-confirmation-form h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #6456d6;
+  text-transform: uppercase;
+}
+.email-confirmation-form p {
+  margin-top: 55px;
+  margin-bottom: 72px;
+  font-weight: 400;
+  color: #272727;
+  font-weight: 400;
+}
+.email-confirmation-form__submit {
+  display: block;
+  margin: 0 auto;
+  padding: 13px 23px;
+}
+.email-confirmation-form .hint {
+  width: 386px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 92px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #999;
+}
+.create-password-form {
+  width: 400px;
+  padding: 5.6rem 7.6rem;
+  text-align: center;
+}
+.create-password-form h3 {
+  color: #272727;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+.create-password-form .input-wrapper {
+  width: 22.4rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.create-password-form .input-wrapper.second {
+  margin-bottom: 0;
+}
+.create-password-form .submit {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 4.2rem;
+  margin-top: 4rem;
+  padding: 1.3rem 3rem;
+}
+.register2-form {
+  max-width: 600px;
+  padding: 10.7rem 13.9rem;
+  text-align: center;
+}
+.register2-form .title {
+  color: #272727;
+  margin-top: 3.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.register2-form .desctiprion {
+  display: block;
+  margin: 0 auto;
+  margin-top: 3.1rem;
+  width: 30.6rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  color: #999;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.register2-form .desctiprion b {
+  cursor: pointer;
+}
+@media screen and (max-width: 810px) {
+  .email-confirmation-form {
+    padding: 109px 17%;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    min-height: 100vh;
+  }
+}
+@media screen and (max-width: 605px) {
+  html {
+    font-size: 11px;
+  }
+  .register-form {
+    padding: 2.2rem 1.5rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    min-height: 100vh;
+  }
+  .register-form .name-input-wrapper,
+  .register-form .email-input-wrapper {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .register-form .accout-wrapper .description.first,
+  .register-form .accout-wrapper .description.second {
+    margin-left: 0;
+    width: 100%;
+  }
+  .register-form .submit {
+    margin: 0 auto;
+  }
+  .email-confirmation-form .hint {
+    width: 100%;
+  }
+  .register2-form {
+    padding: 2.2rem 1.5rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    min-height: 100vh;
+  }
+  .register2-form .desctiprion {
+    padding: 0;
+  }
+  .create-password-form .password-input,
+  .create-password-form .repeat-password-input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 12px;
+  }
+  label.error {
+    padding: 0.05rem 0.2rem;
+  }
+  .login-form {
+    padding: 2.2rem 1.5rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    min-height: 100vh;
+  }
+  .login-form .password-input {
+    margin-bottom: 2.5rem;
+  }
+  .login-form .checkbox-wrapper {
+    display: block;
+    text-align: center;
+  }
+  .login-form .submit {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+  .login-form .footer {
+    margin-top: 3rem;
+  }
+  .login-form .footer .forgot-password {
+    margin-top: 2.1rem;
+  }
+  .register-form {
+    padding: 2.2rem 1.5rem;
+  }
+  .register-form h2 {
+    margin-bottom: 1.5rem;
+  }
+  .register-form .input-container {
+    margin-bottom: 2.5rem;
+  }
+  .register-form .input-container .input-wrapper {
+    margin-bottom: 1.4rem;
+  }
+  .register-form .accout-wrapper {
+    margin-bottom: 3rem;
+  }
+  .register-form .submit {
+    width: 100%;
+  }
+  .register2-form {
+    padding: 2.2rem 1.5rem;
+  }
+  .register2-form .title {
+    margin-top: 1.8rem;
+    font-size: 1.4rem;
+  }
+  .register2-form .desctiprion {
+    width: 100%;
+    padding: 0;
+    margin-top: 2.1rem;
+    font-size: 1.3rem;
+  }
+  .create-password-form {
+    width: 100%;
+    padding: 2.2rem 1.5rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    min-height: 100vh;
+  }
+  .create-password-form h3 {
+    margin-bottom: 2.8rem;
+  }
+  .create-password-form .input-wrapper {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  .create-password-form .submit {
+    margin-top: 2.8rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+  .login-form .email-input {
+    margin-bottom: 1.5rem;
+  }
+  .login-form .row .checkbox-wrapper {
+    line-height: 2.8rem;
+  }
+  .register-form h2 {
+    margin-bottom: 1.3rem;
+  }
+  .register-form .option-name .description {
+    font-size: 1.1rem;
+  }
+  .register-form .submit {
+    padding: 1.3rem 2rem;
+    font-size: 1rem !important;
+  }
+  .register2-form .title {
+    margin-top: 1.4rem;
+  }
+  .register2-form .desctiprion {
+    margin-top: 1.9rem;
+  }
+  .create-password-form h3 {
+    margin-bottom: 2.4rem;
+  }
+  .create-password-form .submit {
+    margin-top: 2.4rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .create-password-form .password-input,
+  .create-password-form .repeat-password-input {
+    width: 100%;
+  }
+  .email-confirmation-form h1 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-height: 420px) {
+  form {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    min-height: 100vh;
+  }
+}

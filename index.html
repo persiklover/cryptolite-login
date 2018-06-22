@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Main Page</title>
+</head>
+<body>
+  <form action="" method="GET" class="login-form">
+    <div class="inner">
+      
+      <div class="input-wrapper">
+        <input type="email" name="email" class="email-input" required>
+        <span class="placeholder">Email</span>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="password" name="password" class="password-input" required minlength="4">
+        <span class="placeholder">Password</span>
+      </div>
+
+      <div class="row">
+        <div class="checkbox-wrapper">
+          <input type="checkbox" class="checkbox" id="checkbox">
+          <label for="checkbox">remember me</label>
+        </div>
+          
+        <input type="submit" value="Sign in" class="submit">
+      </div>
+
+
+      <div class="footer">
+        <span>У меня ещё нет аккаунта</span>
+        <a href="register.html" class="register">Зарегистрироваться</a>
+        <a href="#" class="forgot-password">Я забыл пароль</a>
+      </div>
+
+    </div>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/flup-fixer.js"></script>
+</body>
+</html>
